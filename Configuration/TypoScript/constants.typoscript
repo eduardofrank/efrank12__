@@ -11,10 +11,10 @@ page {
     logo {
         file = EXT:efrank12/Resources/Public/Images/logo.svg
         fileInverted = EXT:efrank12/Resources/Public/Images/logo-inverted.svg
-        height = 52
-        width = 192
-        alt = efrank12
-        linktitle = efrank12
+        height = 100
+        width = 100
+        alt = efrank logo
+        linktitle = Eduardo Frank
     }
     favicon {
         file = EXT:efrank12/Resources/Public/Icons/favicon.ico
@@ -58,3 +58,44 @@ plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
 }
+
+page.logo.height = 100
+page.logo.width = 100
+page.preloader.logo.file = EXT:efrank12/Resources/Public/Images/logo.svg
+page.preloader.logo.width = 100
+page.preloader.backgroundColor = #00F39D
+page.preloader.logo.height = 100
+page.meta.author = Eduardo Frank
+plugin.bootstrap_package.settings.scss.primary = #0d6296
+plugin.bootstrap_package.settings.scss.h2-font-size = $font-size-base * 1.5
+plugin.bootstrap_package.settings.scss.h1-font-size = $font-size-base * 1.75
+plugin.bootstrap_package.settings.scss.h3-font-size = $font-size-base * 1.25
+plugin.bootstrap_package.settings.scss.h4-font-size = $font-size-base * 1.15
+plugin.bootstrap_package.settings.scss.h5-font-size = $font-size-base * .95
+plugin.bootstrap_package.settings.scss.h6-font-size = $font-size-base * 0.8
+plugin.bootstrap_package.settings.scss.headings-line-height = .9
+page.theme.copyright.text = Hecho con <a href="http://www.typo3.org" rel="noopener" target="_blank">TYPO3</a> y <a href="https://www.bootstrap-package.com" rel="noopener" target="_blank">Bootstrap Package</a>.
+plugin.tx_blog.settings.blogUid = 3
+plugin.tx_blog.settings.storagePid = 7
+plugin.tx_blog.settings.categoryUid = 8
+plugin.tx_blog.settings.tagUid = 9
+plugin.tx_blog.settings.authorUid = 10
+plugin.tx_blog.settings.archiveUid = 11
+
+plugin.bootstrap_package.settings.scss.secondary = #90b4ce
+plugin.tx_blog.view.partialRootPaths = EXT:efrank12/Resources/Private/Partials/
+plugin.tx_blog.settings.meta.postheader.elements.categories.enable = 1
+plugin.tx_blog.settings.meta.postheader.elements.tags.enable = 1
+plugin.tx_blog.settings.meta.postfooter.elements.authors.enable = 1
+plugin.tx_blog.settings.meta.postfooter.elements.published.enable = 1
+plugin.tx_blog.settings.meta.listfooter.enable = 1
+plugin.tx_blog.settings.meta.listheader.modifier = simple
+plugin.bootstrap_package.settings.scss.gray-800 = #4b4b4b
+plugin.bootstrap_package.settings.scss.gray-900 = #3b3b3b
+plugin.tx_blog.settings.meta.listheader.enable = 1
+plugin.tx_blog.settings.meta.listfooter.elements.published.enable = 1
+plugin.tx_blog.settings.meta.listfooter.elements.categories.enable = 1
+page.theme.cookieconsent.type = info
+page.preloader.enable = 0
+plugin.tx_blog.settings.notifications.CommentAddedNotification.admin.email = efrank@eduardofrank.co
+config.headerComment = Integration by Eduardo Frank, based on the TYPO3 Bootstrap Package by Benjamin Kott - https://www.bootstrap-package.com/

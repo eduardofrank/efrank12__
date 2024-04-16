@@ -1,0 +1,13 @@
+<f:if condition="!{metatype}"><f:variable name="metatype" value="default" /></f:if>
+<f:variable name="modifier" value="{settings.meta.{metatype}.modifier}" />
+<f:if condition="{settings.meta.{metatype}.enable}">
+            <f:if condition="{settings.meta.{metatype}.elements.authors.enable}">
+                <f:render partial="Meta/Elements/Authors" arguments="{_all}" />
+            </f:if>
+        <f:if condition="{settings.meta.{metatype}.elements.categories.enable}">
+            <f:render partial="Meta/Elements/Categories" arguments="{_all}" />
+        </f:if>
+        <f:if condition="{settings.meta.{metatype}.elements.tags.enable}">
+            <f:render partial="Meta/Elements/Tags" arguments="{_all}" />
+        </f:if>
+</f:if>

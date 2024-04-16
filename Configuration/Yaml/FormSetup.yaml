@@ -1,0 +1,11 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedFileMounts:
+          10: 1:/form_definitions/
+          20: 1:/user_upload/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+        allowedExtensionPaths:
+          10: EXT:efrank12/Resources/Private/Forms/

@@ -1,0 +1,35 @@
+    <f:if condition="{pagination} && {pagination.paginatedItems}">
+        <f:then>
+
+            <f:if condition="{settings.lists.pagination.insertAbove}">
+                <f:render partial="Pagination/Pagination" arguments="{pagination: pagination}" />
+            </f:if>
+            <div class="postlist{f:if(condition: type, then: ' postlist--{type}')}">
+                <f:for each="{pagination.paginatedItems}" iteration="iterator" as="post">
+                    <blogvh:cache post="{post}" />
+                    <f:render partial="List/Post" arguments="{_all}" />
+                </f:for>
+            </div>
+            <f:if condition="{settings.lists.pagination.insertBelow}">
+                <f:render partial="Pagination/Pagination" arguments="{pagination: pagination}" />
+            </f:if>
+
+        </f:then>
+        <f:else if="{posts}">
+
+            <div class="postlist{f:if(condition: type, then: ' postlist--{type}')}">
+                <f:for each="{posts}" iteration="iterator" as="post">
+                    <blogvh:cache post="{post}" />
+                    <f:render partial="List/Post" arguments="{_all}" />
+                </f:for>
+            </div>
+
+        </f:else>
+        <f:else>
+
+            <div class="alert alert-info" role="alert">
+                <strong><f:translate key="list.no_posts.title" /></strong><br><f:translate key="list.no_posts.message" />
+            </div>
+
+        </f:else>
+    </f:if>

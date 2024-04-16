@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
-    <file source-language="en" datatype="plaintext" original="EXT:efrank11/Resources/Private/Language/locallang.xlf" date="2022-03-03UTC11:24:540" product-name="efrank11">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:efrank11/Resources/Private/Language/de.locallang.xlf" date="2022-03-03UTC11:25:540" product-name="efrank11">
         <header/>
         <body>
              <trans-unit id="contacto.element.name.properties.label" resname="contacto.element.name.properties.label" approved="yes">
-                  <source>Name</source>
+                  <source>First Name</source>
+                  <target>Name</target>
              </trans-unit>
              <trans-unit id="contacto.element.lastName.properties.label" resname="contacto.element.lastName.properties.label" approved="yes">
                   <source>Last Name</source>
+                  <target>Familienname</target>
              </trans-unit>
              <trans-unit id="contacto.element.emailAddress.properties.label" resname="contacto.element.emailAddress.properties.label" approved="yes">
                   <source>e-mail</source>
+                  <target>e-mail</target>
              </trans-unit>
              <trans-unit id="contacto.element.subject.properties.label" resname="contacto.element.subject.properties.label" approved="yes">
                   <source>Subject</source>
+                  <target>Betreff</target>
              </trans-unit>
              <trans-unit id="contacto.element.message.properties.label" resname="contacto.element.message.properties.label" approved="yes">
                   <source>Message</source>
+                  <target>Meldung</target>
              </trans-unit>
-             <trans-unit id="element.contacto.renderingOptions.submitButtonLabel" resname="contacto.element.renderingOptions.submitButtonLabel" approved="yes">
+             <trans-unit id="element.contacto.renderingOptions.submitButtonLabel" resname="element.contacto.renderingOptions.submitButtonLabel" approved="yes">
                   <source>Submit</source>
+                  <target>Senden</target>
              </trans-unit>
              <trans-unit id="contacto.finisher.EmailToReceiver.subject" resname="contacto.finisher.EmailToReceiver.subject" approved="yes">
-                  <source>Message from the web</source>
+                  <source>Message from the web.</source>
+                  <target>Meldung von der Webseite.</target>
              </trans-unit>
              <trans-unit id="contacto.element.mandatory.properties.text" resname="contacto.element.mandatory.properties.text" approved="yes">
                   <source>* Mandatory field</source>
+                  <target>* Pflichtfeld</target>
              </trans-unit>
         </body>
     </file>

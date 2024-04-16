@@ -1,0 +1,174 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: contacto
+label: contacto
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{subject}'
+      recipients:
+        info@eduardofrank.co: info
+      senderAddress: '{emailAddress}'
+      senderName: '{name}  {lastName}'
+      addHtmlPart: false
+      attachUploads: true
+      translation:
+        language: Default
+      useFluidEmail: false
+      title: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '16'
+      additionalParameters: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: name
+            label: Name
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: lastName
+            label: 'Last Name'
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Email
+            identifier: emailAddress
+            label: e-mail
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: EmailAddress
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: subject
+            label: Subject
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xxl:
+                    numbersOfColumnsToUse: '6'
+                  xl:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Textarea
+            identifier: message
+            label: Message
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xxl:
+                    numbersOfColumnsToUse: '12'
+                  xl:
+                    numbersOfColumnsToUse: '12'
+                  lg:
+                    numbersOfColumnsToUse: '12'
+                  md:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '12'
+                  xs:
+                    numbersOfColumnsToUse: '12'
+              fluidAdditionalAttributes:
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            properties:
+              text: '* Required Field'
+            type: StaticText
+            identifier: mandatory
+            label: ''

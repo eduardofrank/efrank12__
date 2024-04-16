@@ -1,0 +1,23 @@
+<article class="postlist__post">
+    <f:render partial="Meta/ListHeaderTime" arguments="{_all}" />
+    <f:if condition="{post.featuredImage}">
+        <blogvh:link.post post="{post}" class="postlist__featuredimage" additionalAttributes="{aria-hidden: 'true'}" tabindex="-1">
+            <f:render partial="General/FeaturedImage" arguments="{image: post.featuredImage, settings: settings.lists.featuredImage}" />
+        </blogvh:link.post>
+    </f:if>
+    <h4 class="postlist__posttitle" itemprop="name"><blogvh:link.post post="{post}" /></h4>
+    <div class="header-wrapper">
+        <f:render partial="Meta/ListHeader" arguments="{_all}" />
+    </div>
+    <f:if condition="{post.abstract}">
+        <f:then>
+            <p class="postlist__postdescription" itemprop="description">{post.abstract}</p>
+        </f:then>
+        <f:else>
+            <p class="postlist__postdescription" itemprop="description">{post.description}</p>
+        </f:else>
+    </f:if>
+    <div class="footer-wrapper">
+        <f:render partial="Meta/ListFooter" arguments="{_all}" />
+    </div>
+</article>

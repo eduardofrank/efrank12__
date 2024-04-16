@@ -9,7 +9,13 @@
 ##############
 page {
     includeCSS {
+    includeCSSLibs {
+        googlewebfont = https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap
+        code = https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap
+    }
+
         theme = EXT:efrank12/Resources/Public/Scss/Theme/theme.scss
+        styles = EXT:efrank12/Resources/Public/Css/efrank.css
     }
 
     includeJSLibs {
@@ -26,5 +32,137 @@ page {
 
     includeJSFooter {
         efrank12_scripts = EXT:efrank12/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}
+
+config.admPanel = 0
+config.contentObjectExceptionHandler = 0
+
+#### FORM CONFIGURATION ###
+#plugin.tx_form.settings.yamlConfigurations.100 = EXT:efrank12/Configuration/Yaml/FormSetup.yaml#
+#module.tx_form.settings.yamlConfigurations.100 = EXT:efrank12/Configuration/Yaml/FormSetup.yaml#
+plugin.tx_form.settings.yamlConfigurations.200 = EXT:efrank12/Configuration/Yaml/CustomFormSetup.yaml
+module.tx_form.settings.yamlConfigurations.200 = EXT:efrank12/Configuration/Yaml/CustomFormSetup.yaml
+
+#### COOKIE CONSENT ###
+plugin.tx_bootstrap_package {
+    _LOCAL_LANG {
+        default {
+            cookieconsent.common.message = This site employs cookies to serve a better user experience on our page!
+            cookieconsent.common.dismiss = OK!
+        }
+        es {
+            cookieconsent.common.message = Este sitio utiliza cookies para proporcionar una mejor experiencia en nuestra página
+            cookieconsent.common.dismiss = Ok!
+        }
+        de {
+            cookieconsent.common.message = Unsere Webseite verwendet Cookies um eine bessere Benutzererfahrug bringen können. Mit Nutzung unserer Webseite stimmen Sie der Verwendung von Cookies zu.
+            cookieconsent.common.dismiss = Erlauben
+        }
+    }
+}
+
+#### GETS RID OF THE ROOT IN THE BREADCRUMB MENU ####
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        dataProcessing {
+                30 {
+                special = rootline
+                special.range = 1|-1
+                includeNotInMenu = 1
+                as = breadcrumb
+                if {
+                    value = {$page.theme.breadcrumb.enableLevel}
+                    value {
+                        insertData = 1
+                        prioriCalc = 1
+                        stdWrap.wrap = |-1
+                    }
+                    isGreaterThan {
+                        data = level
+                    }
+                }
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = nav_icon
+                        as = icon
+                    }
+                }
+            }
+        }
+    }
+}
+
+### Header inclusion of favicons ###
+page.headerData.2020 = FLUIDTEMPLATE
+page.headerData.2020 {
+	file = EXT:efrank12/Resources/Private/Templates/Favicons.html
+ 	extbase.controllerExtensionName = efrank12
+}
+
+
+### Handling of high res screens ###
+lib.contentElement.settings.responsiveimages.variants {
+    default {
+        breakpoint = 1200
+        width = 1100
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    large {
+        breakpoint = 992
+        width = 920
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    medium {
+        breakpoint = 768
+        width = 680
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }
+    small {
+        breakpoint = 576
+        width = 500
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
+    }    
+    extrasmall {
+        breakpoint = unset
+        width = 374
+        sizes {
+            1\.5x {
+                multiplier = 1.5
+            }
+            2x {
+                multiplier = 2
+            }
+        }
     }
 }

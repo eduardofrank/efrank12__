@@ -1,0 +1,8 @@
+<f:if condition="!{metatype}"><f:variable name="metatype" value="default" /></f:if>
+<f:variable name="modifier" value="{settings.meta.{metatype}.modifier}" />
+<f:if condition="{settings.meta.{metatype}.enable}">
+        <f:if condition="{settings.meta.{metatype}.elements.published.enable}">
+            <f:variable name="publishDateFormat" value="{settings.meta.{metatype}.elements.published.format}" />
+            <f:render partial="Meta/Elements/Published" arguments="{_all}" />
+        </f:if>
+</f:if>
