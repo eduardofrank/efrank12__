@@ -1,0 +1,131 @@
+####
+# Example of what CKEditor can all bring
+###
+
+# Load default processing options
+imports:
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Processing.yaml' }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml' }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
+
+# Add configuration for the editor
+# For complete documentation see https://ckeditor.com/docs/ckeditor5/latest/features/index.html
+editor:
+  config:
+    style:
+      definitions:
+        # block level styles
+        - { name: 'Orange title H2', element: 'h2', classes: [], styles: { color: 'orange', background: 'blue' } }
+        - { name: 'Orange title H3', element: 'h3', classes: [], styles: { color: 'orange', background: 'blue' } }
+        - { name: 'Quote / Citation', element: 'blockquote', classes: [],  }
+        - { name: 'Code inline', element: 'code', classes: ['code'],  }
+
+        # Inline styles
+        - { name: 'Yellow marker', element: 'span', classes: [], styles: { background-color: 'yellow' } }
+
+    heading:
+      options:
+        - { model: 'paragraph', title: 'Paragraph' }
+        - { model: 'heading1', view: 'h1', title: 'Heading 1' }
+        - { model: 'heading2', view: 'h2', title: 'Heading 2' }
+        - { model: 'heading3', view: 'h3', title: 'Heading 3' }
+        - { model: 'heading4', view: 'h4', title: 'Heading 4' }
+        - { model: 'formatted', view: 'pre', title: 'Pre-Formatted Text' }
+
+    toolbar:
+      items:
+        - clipboard
+        - removeFormat
+        - undo
+        - redo
+        # grouping separator
+        - '|'
+        - find
+        - selectAll
+        - '|'
+        - link
+        - insertTable
+        - tableColumn
+        - tableRow
+        - mergeTableCells
+        - '|'
+        - codeBlock
+        - sourceEditing
+        - showBlocks
+        - horizontalLine
+        # line break
+        - '-'
+        - bold
+        - italic
+        - underline
+        - strikethrough
+        - subscript
+        - superscript
+        - softhyphen
+        - '|'
+        - bulletedList
+        - numberedList
+        - blockQuote
+        - indent
+        - outdent
+        - alignment
+        - '|'
+        - specialCharacters
+        - '-'
+        - style
+        - heading
+        - fontFamily
+        - fontBackgroundColor
+        - fontColor
+        - fontSize
+
+    alignment:
+      options:
+        - { name: 'left', className: 'text-start' }
+        - { name: 'center', className: 'text-center' }
+        - { name: 'right', className: 'text-end' }
+        - { name: 'justify', className: 'text-justify' }
+
+    table:
+      defaultHeadings: { rows: 1 }
+      contentToolbar:
+        - tableColumn
+        - tableRow
+        - mergeTableCells
+        - tableProperties
+        - tableCellProperties
+        - toggleTableCaption
+
+    fontColor:
+      colors:
+        - { label: 'Orange', color: '#ff8700' }
+        - { label: 'Blue', color: '#0080c9' }
+        - { label: 'Green', color: '#209d44' }
+
+    fontBackgroundColor:
+      colors:
+        - { label: 'Stage orange light', color: '#fab85c' }
+
+    fontFamily:
+      options:
+        - 'default'
+        - 'Arial, sans-serif'
+
+    fontSize:
+      options:
+        - 'default'
+        - 18
+        - 21
+
+    importModules:
+      - { 'module': '@ckeditor/ckeditor5-font', 'exports': ['Font'] }
+      - { 'module': '@ckeditor/ckeditor5-show-blocks', 'exports': ['ShowBlocks'] }
+      - { 'module': '@ckeditor/ckeditor5-word-count', 'exports': ['WordCount'] }
+      - { 'module': '@ckeditor/ckeditor5-code-block', 'exports': ['CodeBlock'] }
+    
+    codeBlock:
+      languages: [
+          { language: 'plaintext', label: 'Plain text', class: '' },
+          { language: 'php', label: 'PHP', class: 'php-code' },
+          { language: 'javascript', label: 'JavaScript', class: 'js javascript js-code' },
+      ]

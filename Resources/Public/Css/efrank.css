@@ -39,7 +39,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 pre, code, kbd, samp {
     font-family: 'Fira Mono', monospace;
-    font-size: 1em;
+}
+
+pre code {
+    font-family: 'Fira Mono', monospace;
+    display:block;
+    padding: .5rem 0.25rem;
+    color: #4a494a;
+    word-wrap: break-word;
+    border: 1px solid #dad9da;
+    border-radius: 3px;
+    background-color:#f6f6f6;
 }
 
 code {
