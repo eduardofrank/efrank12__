@@ -72,6 +72,10 @@ code a, pre a {
     color: #000000;
 }
 
+a span {
+    color: #146296 !important;
+}
+
 @media (max-width:991.9px) {
     .carousel-item-type-call_to_action .carousel-box {
         max-width: 100%;
