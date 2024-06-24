@@ -44,6 +44,23 @@ config.contentObjectExceptionHandler = 0
 plugin.tx_form.settings.yamlConfigurations.200 = EXT:efrank12/Configuration/Yaml/CustomFormSetup.yaml
 module.tx_form.settings.yamlConfigurations.200 = EXT:efrank12/Configuration/Yaml/CustomFormSetup.yaml
 
+### Header inclusion of favicons ###
+page {
+ headerData {
+     2024 = FLUIDTEMPLATE
+     2024 {
+  template = TEXT
+  template.value (
+<link rel="apple-touch-icon" sizes="180x180" href="{f:uri.resource(path: 'Icons/apple-touch-icon.png', extensionName: 'efrank12')}">
+<link rel="icon" type="image/png" sizes="32x32" href="{f:uri.resource(path: 'Icons/favicon-32x32.png', extensionName: 'efrank12')}">
+<link rel="icon" type="image/png" sizes="16x16" href="{f:uri.resource(path: 'Icons/favicon-16x16.png', extensionName: 'efrank12')}">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+            )   
+        }
+    }
+}
+
 #### COOKIE CONSENT ###
 plugin.tx_bootstrap_package {
     _LOCAL_LANG {
@@ -95,12 +112,6 @@ page {
     }
 }
 
-### Header inclusion of favicons ###
-page.headerData.2020 = FLUIDTEMPLATE
-page.headerData.2020 {
-	file = EXT:efrank12/Resources/Private/Templates/Favicons.html
- 	extbase.controllerExtensionName = efrank12
-}
 
 
 ### Handling of high res screens ###

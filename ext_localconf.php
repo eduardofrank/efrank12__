@@ -9,3 +9,5 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['efrank12'] = 'EXT:efrank12/Config
  * PageTS
  */
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:efrank12/Configuration/TsConfig/Page/All.tsconfig">');
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['yoast_seo']['allowedDoktypes']['blog'] = 137;

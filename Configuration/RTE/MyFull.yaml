@@ -18,10 +18,11 @@ editor:
         - { name: 'Orange title H2', element: 'h2', classes: [], styles: { color: 'orange', background: 'blue' } }
         - { name: 'Orange title H3', element: 'h3', classes: [], styles: { color: 'orange', background: 'blue' } }
         - { name: 'Quote / Citation', element: 'blockquote', classes: [],  }
-        - { name: 'Code inline', element: 'code', classes: ['code'],  }
 
         # Inline styles
         - { name: 'Yellow marker', element: 'span', classes: [], styles: { background-color: 'yellow' } }
+        - { name: 'solid leading', element: 'strong', classes: [solidleading], }
+        - { name: 'Code inline', element: 'code', classes: ['code'],  }
 
     heading:
       options:
@@ -126,6 +127,9 @@ editor:
     codeBlock:
       languages: [
           { language: 'plaintext', label: 'Plain text', class: '' },
+          { language: 'css', label: 'CSS', class: '' },
+          { language: 'html', label: 'HTML', class: '' },
+          { language: 'yaml', label: 'YAML', class: '' },
           { language: 'php', label: 'PHP', class: 'php-code' },
           { language: 'javascript', label: 'JavaScript', class: 'js javascript js-code' },
       ]

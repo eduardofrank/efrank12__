@@ -42,22 +42,24 @@ pre, code, kbd, samp {
 }
 
 pre code {
-    font-family: 'Fira Mono', monospace;
-    display:block;
-    padding: .5rem 0.25rem;
+    display:inline-block;
+    min-width: 100%;
+    font-size: 100%;
     color: #4a494a;
     word-wrap: break-word;
+    padding: .5rem 0.35rem;
     border: 1px solid #dad9da;
     border-radius: 3px;
     background-color:#f6f6f6;
 }
 
 code {
-    font-family: 'Fira Mono', monospace;
+    display:inline;
+    min-width: 100%;
     font-size: 85%;
     color: #4a494a;
     word-wrap: break-word;
-    padding: 2px 3px 1px;
+    padding: .08rem 0.05rem;
     border: 1px solid #dad9da;
     border-radius: 3px;
     background-color:#f6f6f6;
@@ -72,7 +74,12 @@ code a, pre a {
     color: #000000;
 }
 
-a span {
+.solidleading {
+    position: relative;
+    bottom: -1rem;
+}
+
+p a span {
     color: #146296 !important;
 }
 
